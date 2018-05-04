@@ -12,7 +12,7 @@ class NewsFilter extends Component {
     }
 
     filterBy(data, field, value) { //глупый фильтр
-        return data.filter(item => item[field] === value);
+        return !value ? data : data.filter(item => item[field] === value);;
     }
 
     handleTitleFilter(event) {
