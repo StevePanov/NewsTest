@@ -22,6 +22,7 @@ class NewsGrid extends Component {
                         <News
                             key={news.id}
                             title={news.title}
+                            onDelete={this.props.onNewsDelete.bind(null, news)}
                         >
                             {news.body}
                         </News>

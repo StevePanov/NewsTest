@@ -49,13 +49,17 @@ class App extends Component {
     this.setState({ result: event.name });
   }
 
+  handleNewsDelete(news) {
+    NewsActions.deleteNews(news.id);
+  }
+
   render() {
     return (
       <div className='App'>
         <h1 className='App-title'>Новости</h1>
         <NewsEditor onNewsAdd={this.handleNewsAdd} />
         <NewsFilter onFilter={this.handleTitleFilter} news={this.state.news} />
-        <NewsGrid news={this.state.result} />
+        <NewsGrid news={this.state.result} onNewsDelete={this.handleNewsDelete} />
       </div>
     );
   }

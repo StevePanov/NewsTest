@@ -9,5 +9,9 @@ export default {
 
     createNews(data) {
         return axios.post(`${apiPrefix}/news`, data);
+    },
+
+    deleteNews(newsId) {
+        return axios.delete(`${apiPrefix}/news/${newsId}`);
     }
 }

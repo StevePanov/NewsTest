@@ -13,9 +13,22 @@
 }
 .News:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  }
+}
+
+.News:hover .News-del-icon {
+    display: block;
+}
+
 .News-title {
     margin: 0;
     margin-bottom: 5px;
     color: rgb(72, 75, 87);
+}
+.News-del-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: none;
+    color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
 }

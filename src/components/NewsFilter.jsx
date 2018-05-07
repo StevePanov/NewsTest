@@ -11,9 +11,6 @@ class NewsFilter extends Component {
         this.handleTitleFilter = this.handleTitleFilter.bind(this);
     }
 
-    // filterBy(data, field, value) { //глупый фильтр
-    //     return !value ? data : data.filter(item => item[field] === value);
-    // }
     filterBy(data, value) {
         let res = [];
         for(let i =0; i < data.length; i++) {

@@ -32,6 +32,15 @@ const NewsActions = {
         .catch(err =>
             console.error(err)
         );
+    },
+    deleteNews(newsId) {
+        api.deleteNews(newsId)
+        .then(() =>
+            this.loadNews()
+        )
+        .catch(err =>
+            console.error(err)
+        );
     }
 };
 
